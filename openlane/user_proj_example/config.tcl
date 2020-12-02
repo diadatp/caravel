@@ -4,14 +4,14 @@ set ::env(DESIGN_NAME) user_proj_example
 
 set ::env(VERILOG_FILES) "\
 	$script_dir/../../verilog/rtl/defines.v \
+	$script_dir/../../verilog/rtl/DSP48.v \
 	$script_dir/../../verilog/rtl/user_proj_example.v"
 
-set ::env(CLOCK_PORT) ""
-set ::env(CLOCK_NET) "counter.clk"
-set ::env(CLOCK_PERIOD) "10"
+set ::env(CLOCK_PORT) "wb_clk_i"
+set ::env(CLOCK_PERIOD) "100"
 
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 600 600"
+set ::env(DIE_AREA) "0 0 1000 1000"
 set ::env(DESIGN_IS_CORE) 0
 
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
