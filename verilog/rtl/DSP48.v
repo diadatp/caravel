@@ -29,6 +29,7 @@ module DSP48 (
   input      [31:0]   wb_DAT_MOSI,
   input      [0:0]    wb_SEL,
   input      [127:0]  la_data_in,
+  input      [37:0]   io_in,
   output reg [37:0]   io_out,
   output     [37:0]   io_oeb 
 );
@@ -69,6 +70,9 @@ module DSP48 (
       end
       32'b00000000000000000000000000010000 : begin
         wb_DAT_MISO[24 : 0] = dspArea_regA;
+      end
+      32'b00000000000000000000000000010100 : begin
+        wb_DAT_MISO[31 : 0] = io_in[37 : 6];
       end
       default : begin
       end
@@ -137,6 +141,8 @@ module DSP48 (
           if(dspArea_wbCtrl_doRead)begin
             dspArea_regP <= (dspArea_regP + _zz_4_);
           end
+        end
+        32'b00000000000000000000000000010100 : begin
         end
         default : begin
         end

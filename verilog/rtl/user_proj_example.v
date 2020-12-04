@@ -69,6 +69,7 @@ module user_proj_example #(
         .wb_DAT_MOSI(wbs_dat_i ),
         .wb_SEL     (wbs_sel_i ),
         .la_data_in (la_data_in),
+        .io_in      (io_in     ),
         .io_out     (io_out    ),
         .io_oeb     (io_oeb    )
     );
