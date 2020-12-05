@@ -1,3 +1,8 @@
+# DSP48 with DAC
+
+An experimental W2W DAC and 25x16,48 MACC DSP for the first SkyWater shuttle.
+Designed using SpinalHDL and Klayout.
+
 # CIIC Harness  
 
 A template SoC for Google SKY130 free shuttles. It is still WIP. The current SoC architecture is given below.
