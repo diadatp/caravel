@@ -452,6 +452,10 @@ MACRO user_project_wrapper
     USE SIGNAL ;
     PORT
       LAYER met3 ;
+        RECT 2919.700 1612.700 2924.800 1613.900 ;
+        RECT 2919.700 1553.540 2924.800 1554.740 ;
+        RECT -4.800 1543.340 0.300 1544.540 ;
+        RECT 2919.700 1495.060 2924.800 1496.260 ;
         RECT -4.800 1471.260 0.300 1472.460 ;
     END
   END io_in[31]
@@ -527,14 +531,6 @@ MACRO user_project_wrapper
         RECT 2919.700 1260.460 2924.800 1261.660 ;
     END
   END io_in[5]
-  PIN io_in[6]
-    DIRECTION INPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER met3 ;
-        RECT 2919.700 1495.060 2924.800 1496.260 ;
-    END
-  END io_in[6]
   PIN io_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
@@ -743,14 +739,6 @@ MACRO user_project_wrapper
         RECT 2919.700 673.620 2924.800 674.820 ;
     END
   END io_oeb[2]
-  PIN io_oeb[30]
-    DIRECTION OUTPUT TRISTATE ;
-    USE SIGNAL ;
-    PORT
-      LAYER met3 ;
-        RECT -4.800 1543.340 0.300 1544.540 ;
-    END
-  END io_oeb[30]
   PIN io_oeb[31]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
@@ -831,14 +819,6 @@ MACRO user_project_wrapper
         RECT 2919.700 1378.100 2924.800 1379.300 ;
     END
   END io_oeb[5]
-  PIN io_oeb[6]
-    DIRECTION OUTPUT TRISTATE ;
-    USE SIGNAL ;
-    PORT
-      LAYER met3 ;
-        RECT 2919.700 1612.700 2924.800 1613.900 ;
-    END
-  END io_oeb[6]
   PIN io_oeb[7]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
@@ -1135,14 +1115,6 @@ MACRO user_project_wrapper
         RECT 2919.700 1318.940 2924.800 1320.140 ;
     END
   END io_out[5]
-  PIN io_out[6]
-    DIRECTION OUTPUT TRISTATE ;
-    USE SIGNAL ;
-    PORT
-      LAYER met3 ;
-        RECT 2919.700 1553.540 2924.800 1554.740 ;
-    END
-  END io_out[6]
   PIN io_out[7]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
@@ -8189,9 +8161,9 @@ MACRO user_project_wrapper
   END vssa2
   OBS
       LAYER li1 ;
-        RECT 387.005 2.805 2799.415 3505.315 ;
+        RECT 1179.990 1710.795 1768.790 2287.605 ;
       LAYER met1 ;
-        RECT 2.830 2.760 2914.100 3512.160 ;
+        RECT 2.830 2.760 2914.100 3509.040 ;
       LAYER met2 ;
         RECT 2.710 0.300 2917.370 3519.700 ;
       LAYER met3 ;
