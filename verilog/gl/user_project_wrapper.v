@@ -27,30 +27,29 @@ module user_project_wrapper(user_clock2, wb_clk_i, wb_rst_i, wbs_ack_o, wbs_cyc_
   input [3:0] wbs_sel_i;
   input wbs_stb_i;
   input wbs_we_i;
-  user_proj_example mprj (
+  DSP48 mprj (
     .io_in(io_in),
     .io_oeb(io_oeb),
     .io_out(io_out),
     .la_data_in(la_data_in),
-    .la_data_out(la_data_out),
-    .la_oen(la_oen),
+    .user_clock2(user_clock2),
     .vccd1(vccd1),
-    .vccd2(vccd2),
-    .vdda1(vdda1),
-    .vdda2(vdda2),
-    .vssa1(vssa1),
-    .vssa2(vssa2),
+    .vccd2(vccd1),
+    .vdda1(vccd1),
+    .vdda2(vccd1),
+    .vssa1(vssd1),
+    .vssa2(vssd1),
     .vssd1(vssd1),
-    .vssd2(vssd2),
+    .vssd2(vssd1),
+    .wb_ACK(wbs_ack_o),
+    .wb_ADR(wbs_adr_i),
+    .wb_CYC(wbs_cyc_i),
+    .wb_DAT_MISO(wbs_dat_o),
+    .wb_DAT_MOSI(wbs_dat_i),
+    .wb_SEL(wbs_sel_i[0]),
+    .wb_STB(wbs_stb_i),
+    .wb_WE(wbs_we_i),
     .wb_clk_i(wb_clk_i),
-    .wb_rst_i(wb_rst_i),
-    .wbs_ack_o(wbs_ack_o),
-    .wbs_adr_i(wbs_adr_i),
-    .wbs_cyc_i(wbs_cyc_i),
-    .wbs_dat_i(wbs_dat_i),
-    .wbs_dat_o(wbs_dat_o),
-    .wbs_sel_i(wbs_sel_i),
-    .wbs_stb_i(wbs_stb_i),
-    .wbs_we_i(wbs_we_i)
+    .wb_rst_i(wb_rst_i)
   );
 endmodule
